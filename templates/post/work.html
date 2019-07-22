@@ -11,7 +11,7 @@
 {#  <meta content="Mashup templates have been developped by Orson.io team" name="author">#}
 
   
-  <link rel="apple-touch-icon" sizes="180x180" href="/static/post/image/apple-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'post/image/apple-icon-180x180.png' %}">
 {#  <link href="/static/post/image/favicon.ico" rel="icon">#}
 
   <title>Title page</title>  
@@ -61,10 +61,10 @@
         <img src="{% static 'post/image/work001-01.jpg' %}" class="img-responsive" alt="">
         <div class="card-container">
           <div class="text-center">
-          <script type="text/javascript" src="/static/post/js/prism.js"></script>
+          <script type="text/javascript" src="{% static 'post/js/prism.js' %}"></script>
           <h1>{{ post.title }}</h1>
           </div>
-          <p>{{ post.category}}</p>
+          <p>分类：  {{ post.category.name}}</p>
           <font size=5>{{ post.body|safe}}</font>
         </div>
 {#      </div>#}
@@ -74,5 +74,5 @@
 
 
 </body>
-<script type="text/javascript" src="/static/post/js/prism.js"></script>
+<script type="text/javascript" src="{% static 'post/js/prism.js' %}"></script>
 </html>
